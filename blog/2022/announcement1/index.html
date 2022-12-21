@@ -139,7 +139,23 @@
     \end{aligned}
   \end{equation}
   \]
-  According to result, 
+  If we apply the same procedure for <var>b</var><sub>1</sub>, we obtain
+  \[
+  \begin{equation}
+    \begin{aligned}
+      \frac{df}{db_{0}} &= -2\sum_{i=1}^{N}(y_{i}-b_{0}-b_{1}x_{i})x_{i}=0\\
+      &\sum_{i=1}^{N} y_{i}x_{i}-b_{0}\sum_{i=1}^{N}x_{i}-b_{1}\sum_{i=1}^{N}x^2_{i}=0\\
+      b_{1}&=\frac{\sum_{i=1}^{N}x_{i}y_{i}-\frac{1}{N}\sum_{i=1}^{N}x_{i}\sum_{i=1}^{N}y_{i}}{\sum_{i=1}^{N}x^2_{i}-\frac{1}{N}\sum_{i=1}^{N}x^2_{i}}
+    \end{aligned}
+  \end{equation}
+  \]
+  After some mathematical algebra in Eq.5, we find
+  \[
+  \begin{equation}
+    b_{1}=\frac{\sum_{i=1}^{N}(x_{i}-\bar{x})(y_{i}-\bar{y})}{\sum_{i=1}^{N}(x_{i}-\bar{x})^2}=\frac{S_{xy}}{S_{xx}}
+  \end{equation}
+  \]
+  here <var>S</var><sub>xy</sub> and <var>S</var><sub>xx</sub> are known as correlation parammeters.
 </article>
 
 </div>

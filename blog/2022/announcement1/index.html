@@ -3,8 +3,6 @@
 
   <!-- Head -->
   <head>    <!-- Metadata, OpenGraph and Schema.org -->
-    
-
     <!-- Standard metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -37,16 +35,12 @@
 
     <script src="/assets/js/theme.js"></script>
     <script src="/assets/js/dark_mode.js"></script>
-    
-
   </head>
 
   <!-- Body -->
   <body class="fixed-top-nav ">
-
     <!-- Header -->
     <header>
-
       <!-- Nav Bar -->
       <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
         <div class="container">
@@ -58,25 +52,20 @@
             <span class="icon-bar middle-bar"></span>
             <span class="icon-bar bottom-bar"></span>
           </button>
-
           <div class="collapse navbar-collapse text-right" id="navbarNav">
             <ul class="navbar-nav ml-auto flex-nowrap">
-
               <!-- About -->
               <li class="nav-item ">
                 <a class="nav-link" href="/">about</a>
               </li>
-              
               <!-- Blog -->
               <li class="nav-item active">
                 <a class="nav-link" href="/blog/">blog</a>
               </li>
-
               <!-- Other pages -->
               <li class="nav-item ">
                 <a class="nav-link" href="/projects/">projects</a>
               </li>
-
               <!-- Toogle theme mode -->
               <div class="toggle-container">
                 <a id="light-toggle">
@@ -89,84 +78,75 @@
         </div>
       </nav>
     </header>
-
     <!-- Content -->
     <div class="container mt-5">
       <!-- _layouts/post.html -->
-
-<div class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">Lineer Regression.</h1>
-    <p class="post-meta">December 20, 2022</p>
-    <p class="post-tags">
-      <a href="/blog/2022"> <i class="fas fa-calendar fa-sm"></i> 2022 </a>
-
-    </p>
-  </header>
- 
-  <article class="post-content" style="text-align:justify">
-    Linear regression is a frequently used statistical method for linear and continuous variables. In terms of machine learning, which has
-    become popular in recent years, it is included as an introductory subject in many sources. Let's examine the graph below to understand the 
-    subject.
-    <p style="text-align:center"> <img src="/assets/img/regression/LinearRegression.png" alt="Trulli" width="300" height="300"></p>
-    The black dots in the graph represent the real data \[y_{i}\] and the blue line represents the model\[\tilde{y_{i}}\]The difference between these two points is called an error and if we wrote total error with respect to whole data points, we find the following equation
-    \[
-    \begin{equation}e_{total}=\sum_{i=1}^{N}(y_{i}-\tilde{y_{i}})^2\end{equation}
-    \]
-    Here, regression line is depends on the <var>b</var><sub>0</sub> and <var>b</var><sub>1</sub>. Therefore, we can write regression line equation as follows:
-    \[\tilde{y_{i}}=b_{0}+b_{1}x_{i}\]
-    If this eqution is inserted into Eq.1 , we get 
-    \[
-    \begin{equation}f(b_{0},b_{1})=\sum_{i=1}^{N}(y_{i}-b_{0}-b_{1}x_{i})^2\end{equation}
-    \]
-    It is clearly seen that the error function is related to only <var>b</var><sub>0</sub> and <var>b</var><sub>1</sub> from Eq.2. Then, to find values of points minimizing the error function, we have to take its derivative with respect to <var>b</var><sub>0</sub> and <var>b</var><sub>1</sub>
-    \[
-    \begin{equation}
-      \begin{aligned}
-        \frac{df}{db_{0}} &= 0 \\
-        \frac{df}{db_{1}} &= 0 
-      \end{aligned}
-    \end{equation}
-    \]
-  Using the Eq.3, <var>b</var><sub>0</sub> and <var>b</var><sub>1</sub> variables are calculated as
-  \[
-  \begin{equation}
-    \begin{aligned}
-      \frac{df}{db_{0}} &= -2\sum_{i=1}^{N}(y_{i}-b_{0}-b_{1}x_{i})=0\\
-      b_{0}&=\frac{1}{N}\sum_{i=1}^{N} y_{i}-\frac{1}{N}b_{1}\sum_{i=1}^{N}x_{i}\\
-      b_{0}&=\bar{ y_{i}}-b_{1}\bar{ x_{i}}
-    \end{aligned}
-  \end{equation}
-  \]
-  If we apply the same procedure for <var>b</var><sub>1</sub>, we obtain
-  \[
-  \begin{equation}
-    \begin{aligned}
-      \frac{df}{db_{0}} &= -2\sum_{i=1}^{N}(y_{i}-b_{0}-b_{1}x_{i})x_{i}=0\\
-      &\sum_{i=1}^{N} y_{i}x_{i}-b_{0}\sum_{i=1}^{N}x_{i}-b_{1}\sum_{i=1}^{N}x^2_{i}=0\\
-      b_{1}&=\frac{\sum_{i=1}^{N}x_{i}y_{i}-\frac{1}{N}\sum_{i=1}^{N}x_{i}\sum_{i=1}^{N}y_{i}}{\sum_{i=1}^{N}x^2_{i}-\frac{1}{N}\sum_{i=1}^{N}x^2_{i}}
-    \end{aligned}
-  \end{equation}
-  \]
-  After some mathematical algebra in Eq.5, we find
-  \[
-  \begin{equation}
-    b_{1}=\frac{\sum_{i=1}^{N}(x_{i}-\bar{x})(y_{i}-\bar{y})}{\sum_{i=1}^{N}(x_{i}-\bar{x})^2}=\frac{S_{xy}}{S_{xx}}
-  \end{equation}
-  \]
-  here <var>S</var><sub>xy</sub> and <var>S</var><sub>xx</sub> are known as correlation parammeters.
-</article>
-
-</div>
-
+      <div class="post">
+      <header class="post-header">
+        <h1 class="post-title">Linear Regression.</h1>
+        <p class="post-meta">December 20, 2022</p>
+        <p class="post-tags">
+          <a href="/blog/2022"> <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+        </p>
+      </header>
+        <article class="post-content" style="text-align:justify">
+          Linear regression is a frequently used statistical method for linear and continuous variables. In terms of machine learning, which has
+          become popular in recent years, it is included as an introductory subject in many sources. Let's examine the graph below to understand the 
+          subject.
+          <p style="text-align:center"> <img src="/assets/img/regression/LinearRegression.png" alt="Trulli" width="300" height="300"></p>
+          The black dots in the graph represent the real data \[y_{i}\] and the blue line represents the model\[\tilde{y_{i}}\]The difference between these two points is called an error and if we wrote total error with respect to whole data points, we find the following equation
+          \[
+            \begin{equation}e_{total}=\sum_{i=1}^{N}(y_{i}-\tilde{y_{i}})^2\end{equation}
+          \]
+          Here, regression line is depends on the <var>b</var><sub>0</sub> and <var>b</var><sub>1</sub>. Therefore, we can write regression line equation as follows:
+            \[\tilde{y_{i}}=b_{0}+b_{1}x_{i}\]
+          If this eqution is inserted into Eq.1 , we get 
+          \[
+            \begin{equation}f(b_{0},b_{1})=\sum_{i=1}^{N}(y_{i}-b_{0}-b_{1}x_{i})^2\end{equation}
+          \]
+          It is clearly seen that the error function is related to only <var>b</var><sub>0</sub> and <var>b</var><sub>1</sub> from Eq.2. Then, to find values of points minimizing the error function, we have to take its derivative with respect to <var>b</var><sub>0</sub> and <var>b</var><sub>1</sub>
+            \[
+            \begin{equation}
+              \begin{aligned}
+                \frac{df}{db_{0}} &= 0 \\
+                \frac{df}{db_{1}} &= 0 
+              \end{aligned}
+            \end{equation}
+            \]
+          Using the Eq.3, <var>b</var><sub>0</sub> and <var>b</var><sub>1</sub> variables are calculated as
+            \[
+            \begin{equation}
+              \begin{aligned}
+                \frac{df}{db_{0}} &= -2\sum_{i=1}^{N}(y_{i}-b_{0}-b_{1}x_{i})=0\\
+                b_{0}&=\frac{1}{N}\sum_{i=1}^{N} y_{i}-\frac{1}{N}b_{1}\sum_{i=1}^{N}x_{i}\\
+                b_{0}&=\bar{ y_{i}}-b_{1}\bar{ x_{i}}
+              \end{aligned}
+            \end{equation}
+            \]
+          If we apply the same procedure for <var>b</var><sub>1</sub>, we obtain
+            \[
+            \begin{equation}
+              \begin{aligned}
+                \frac{df}{db_{0}} &= -2\sum_{i=1}^{N}(y_{i}-b_{0}-b_{1}x_{i})x_{i}=0\\
+                &\sum_{i=1}^{N} y_{i}x_{i}-b_{0}\sum_{i=1}^{N}x_{i}-b_{1}\sum_{i=1}^{N}x^2_{i}=0\\
+                b_{1}&=\frac{\sum_{i=1}^{N}x_{i}y_{i}-\frac{1}{N}\sum_{i=1}^{N}x_{i}\sum_{i=1}^{N}y_{i}}{\sum_{i=1}^{N}x^2_{i}-\frac{1}{N}\sum_{i=1}^{N}x^2_{i}}
+              \end{aligned}
+            \end{equation}
+            \]
+          After some mathematical algebra in Eq.5, we find
+            \[
+              \begin{equation}
+                b_{1}=\frac{\sum_{i=1}^{N}(x_{i}-\bar{x})(y_{i}-\bar{y})}{\sum_{i=1}^{N}(x_{i}-\bar{x})^2}=\frac{S_{xy}}{S_{xx}}
+              \end{equation}
+            \]
+          where <var>S</var><sub>xy</sub> is known as correlation parammeter and <var>S</var><sub>xx</sub> is variance one.
+        </article>
+      </div>
     </div>
-
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2022 Evrim Ersin Kangal. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
-
       </div>
     </footer>
 
